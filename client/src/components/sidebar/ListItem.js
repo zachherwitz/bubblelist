@@ -8,7 +8,11 @@ import React from "react";
 const ListItem = ({ movie }) => {
     return (
         <div className="list-item">
-            <h1>{movie.title}</h1>
+            <img
+                className="sidebar-poster"
+                src={`https://image.tmdb.org/t/p/w92/${movie.poster_path}`}
+                alt={movie.poster}
+            />
         </div>
     );
 };

@@ -1,6 +1,10 @@
 // Import Dependencies
 import React from "react";
 
+import Sidebar from "../sidebar/Sidebar";
+import Header from "../UIElements/Header";
+import MovieDetails from "../movie/MovieDetails";
+
 /**
  * View for when the list is in the 'final' stage.
  */
@@ -25,16 +29,9 @@ const FinalDisplay = ({ movie }) => {
 
     return (
         <div className="final-display">
-            <div className="info">
-                <h1>{title}</h1>
-                <h3>{tagline}</h3>
-                <h5>{runtime}</h5>
-                <h3>{overview}</h3>
-            </div>
-            <img
-                src={"https://image.tmdb.org/t/p/w342/" + poster}
-                alt={title}
-            />
+            <Header />
+            <Sidebar />
+            <MovieDetails movie={movie} />
         </div>
     );
 };

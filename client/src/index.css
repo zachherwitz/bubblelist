@@ -112,10 +112,10 @@ i:hover {
 .adding-display {
     position: relative;
     display: grid;
-    grid-template-rows: 15% 85%;
-    grid-template-columns: 85% 15%;
+    grid-template-rows: 15% 75% 10%;
+    grid-template-columns: 90% 10%;
     width: 100%;
-    background-color: #7b5589;
+    background-color: #4d2e59;
 }
 
 .adding {
@@ -154,19 +154,27 @@ i:hover {
 }
 
 .adding-display .movie-details {
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-60%, -90%);
-    height: 50%;
+    transform: translate(-60%, 5%);
 }
 /* 
     * COMPARISON DISPLAY
 */
 .comparison-display {
     display: grid;
-    grid-template-rows: 65% 35%;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 8% 92%;
     width: 100%;
+}
+
+.comparison-display header {
     height: 100%;
+}
+
+.comparison-display header h1 {
+    font-size: 5rem;
+    margin: auto;
 }
 
 .comparison-container {
@@ -178,6 +186,22 @@ i:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.comparison-display .sidebar {
+    grid-row: 1 / 4;
+}
+
+/* 
+    * FINAL DISPLAY
+*/
+
+.final-display {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 15% 85%;
+    width: 100%;
+    height: 100%;
 }
 
 /* 
@@ -217,11 +241,21 @@ i:hover {
     border-bottom: 3px solid black;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 15px;
     grid-row: 1 / 3;
     grid-column: 2 / 3;
 }
 
+.sidebar h2 {
+    padding-top: 10px;
+}
+
+.sidebar-poster {
+    margin: 5px 0 0 0;
+}
 /* 
     * MOVIE
 */
@@ -246,7 +280,7 @@ i:hover {
 }
 
 .movie-overlay {
-    background-color: black;
+    background-color: white;
     opacity: 0;
     position: absolute;
     display: flex;
@@ -263,7 +297,7 @@ i:hover {
 }
 
 .title-blur {
-    background: rgba(255, 255, 255, 1);
+    background: white;
     width: 100%;
     height: 45%;
     display: flex;
@@ -272,38 +306,108 @@ i:hover {
 }
 
 .movie-overlay p {
-    color: black;
+    color: #4d2e59;
     opacity: 1 !important;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     padding: 5px;
 }
 
 .movie-details {
     display: flex;
+    flex-direction: column;
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #7b5589;
-    background-color: thistle;
-    border: 5px solid thistle;
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 25px;
     padding: 50px;
-    width: 60%;
-    height: 80%;
+    width: 70%;
+    /* height: 80%; */
+}
+
+.movie-details h1 {
+    margin: 0 auto;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.movie-details span {
+    font-weight: normal;
+}
+
+.movie-details h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.movie-details p {
+    font-size: 1.3rem;
+}
+
+.info-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.info {
+    padding-left: 20px;
+}
+
+.genre-container {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genre {
+    font-size: 1.5rem;
+    font-weight: bold;
+    list-style: none;
+    background-color: thistle;
+    border-radius: 15px;
+    padding: 10px 25px;
+    margin: 10px 20px 0 0;
+}
+
+.add-btn {
+    margin-top: 50px;
+    height: 75px;
+    font-size: 1.5rem;
+    background-color: thistle;
+    color: black;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .movie-compare-details {
     display: flex;
-    background-color: white;
-    border: 5px solid black;
+    flex-direction: column;
+    align-items: center;
     border-radius: 5px;
     padding: 50px;
     width: 80%;
-    height: 90%;
+}
+
+.remove-btn {
+    margin-top: 50px;
+    height: 75px;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: thistle;
+    color: black;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }

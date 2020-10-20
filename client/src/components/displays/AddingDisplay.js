@@ -33,6 +33,7 @@ const AddingDisplay = () => {
             </div>
             <Sidebar />
             <MoviesContainer />
+            <div></div>
             {movieContext.state.single && (
                 <MovieDetails movie={movieContext.state.single} />
             )}

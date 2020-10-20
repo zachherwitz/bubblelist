@@ -42,34 +42,38 @@ const MovieDetails = ({ movie }) => {
 
     return (
         <div className="movie-details">
-            <div className="details-poster">
+            <h1>
+                {title.toUpperCase()} <span>({runtime}min)</span>
+            </h1>
+            <div className="info-container">
                 <img
                     src={"https://image.tmdb.org/t/p/w342/" + poster}
                     alt={title}
                 />
-            </div>
-            <div className="info">
-                <h1>{title}</h1>
-                <h2>{tagline}</h2>
-                <h3>Runtime: {runtime} min</h3>
-                <h3>{overview}</h3>
-                <ul>
-                    {genres &&
-                        genres.map((genre, index) => {
-                            return <li key={index}>{genre.name}</li>;
-                        })}
-                </ul>
-                {homepage && (
-                    <a href={homepage} target="_blank">
-                        <h4>Watch Now!</h4>
-                    </a>
-                )}
-                <div className="vote">
-                    <h4>Vote Avg. {vote_average}</h4>
-                    <h4>Vote Count {vote_count}</h4>
+                <div className="info">
+                    <h2>{tagline}</h2>
+                    <p>{overview}</p>
+                    <ul className="genre-container">
+                        {genres &&
+                            genres.map((genre, index) => {
+                                return (
+                                    <li className="genre" key={index}>
+                                        {genre.name}
+                                    </li>
+                                );
+                            })}
+                    </ul>
                 </div>
-                <button onClick={addMovie}>Add to List</button>
             </div>
+            {listContext.state.result ? (
+                <button className="add-btn">
+                    YOU CHOSE {title.toUpperCase()}!
+                </button>
+            ) : (
+                <button className="add-btn" onClick={addMovie}>
+                    ADD MOVIE TO LIST
+                </button>
+            )}
         </div>
     );
 };

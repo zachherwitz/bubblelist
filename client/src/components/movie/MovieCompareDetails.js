@@ -41,19 +41,15 @@ const MovieCompareDetails = ({ movie }) => {
 
     return (
         <div className="movie-compare-details">
-            <div className="info">
-                <button id={id} onClick={removeFromList}>
-                    Remove
-                </button>
-                <h1>{title}</h1>
-                <h3>{tagline}</h3>
-                <h5>{runtime}</h5>
-                <h4>{overview}</h4>
+            <div>
+                <img
+                    src={"https://image.tmdb.org/t/p/w342/" + poster}
+                    alt={title}
+                />
             </div>
-            <img
-                src={"https://image.tmdb.org/t/p/w342/" + poster}
-                alt={title}
-            />
+            <button className="remove-btn" id={id} onClick={removeFromList}>
+                REMOVE FROM LIST
+            </button>
         </div>
     );
 };

@@ -15,13 +15,16 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar">
-            <h1>
-                Pick {7 - listContext.state.initialList.length} more{" "}
-                {7 - listContext.state.initialList.length === 1
-                    ? "movie"
-                    : "movies"}
-                !
-            </h1>
+            <h2>YOUR LIST</h2>
+            {listContext.state.stage === "adding" && (
+                <p>
+                    Pick {7 - listContext.state.initialList.length} more
+                    {7 - listContext.state.initialList.length === 1
+                        ? " movie"
+                        : " movies"}
+                    !
+                </p>
+            )}
             {listContext.state.initialList &&
                 listContext.state.initialList.map((movie, index) => {
                     return <ListItem key={index} movie={movie} />;
