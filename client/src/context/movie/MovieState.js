@@ -89,6 +89,9 @@ const MovieState = props => {
         // fetch initial results of search
         let res = await (await fetch(url)).json();
         // // dispatch the results to the reducer
+        if (res.data.results.length < 6) {
+            res.data.results = [...res.data.results, ...state.popular];
+        }
         dispatch({
             type: FETCH_MOVIES,
             payload: res.data.results

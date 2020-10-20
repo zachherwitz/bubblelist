@@ -32,6 +32,7 @@ const Search = () => {
         if (!listContext.state.initialList) {
             listContext.createList();
         }
+        setQuery("");
     };
 
     return (
@@ -40,6 +41,7 @@ const Search = () => {
                 type="text"
                 className="search-bar"
                 placeholder="I feel like watching..."
+                value={query}
                 onChange={handleInput}
             />
         </form>

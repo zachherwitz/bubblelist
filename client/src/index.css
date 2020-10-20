@@ -35,6 +35,10 @@ body {
     align-items: flex-end;
 }
 
+.splash .movie {
+    margin: 0;
+}
+
 .more-info {
     display: flex;
     flex-direction: column;
@@ -76,7 +80,7 @@ footer .socials {
 .adding-display {
     position: relative;
     display: grid;
-    grid-template-rows: 15% 1fr;
+    grid-template-rows: 15% 85%;
     grid-template-columns: 85% 15%;
     width: 100%;
     background-color: #7b5589;
@@ -84,22 +88,27 @@ footer .socials {
 
 .adding {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: wrap;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     flex-wrap: wrap;
     height: 100%;
-    padding: 0 50px;
+}
+
+.adding-header {
+    height: 100%;
 }
 
 .adding-header header h1 {
     font-size: 2rem;
-    margin-top: 20px;
+    margin: 20px 0 10px 0;
 }
 
 .adding-header .search-form {
     width: 100%;
-    height: 50%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,9 +116,16 @@ footer .socials {
 
 .adding-header .search-bar {
     width: 70%;
-    height: 50%;
+    height: 50px;
     padding: 10px;
     font-size: 2rem;
+}
+
+.adding-display .movie-details {
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -90%);
+    height: 50%;
 }
 /* 
     * COMPARISON DISPLAY
@@ -147,7 +163,15 @@ footer .socials {
     width: 70%;
     height: 25%;
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: black;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-bar::placeholder {
+    color: thistle;
+    font-size: 1.6rem;
 }
 
 /* 
@@ -225,22 +249,20 @@ footer .socials {
 }
 
 .movie-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     position: absolute;
-    top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    border: 5px solid black;
+    color: #7b5589;
+    background-color: thistle;
+    border: 5px solid thistle;
     border-radius: 5px;
     padding: 50px;
-    width: 80%;
-    height: 90%;
+    width: 60%;
+    height: 80%;
 }
 
 .movie-compare-details {

@@ -42,6 +42,12 @@ const MovieDetails = ({ movie }) => {
 
     return (
         <div className="movie-details">
+            <div className="details-poster">
+                <img
+                    src={"https://image.tmdb.org/t/p/w342/" + poster}
+                    alt={title}
+                />
+            </div>
             <div className="info">
                 <h1>{title}</h1>
                 <h2>{tagline}</h2>
@@ -62,12 +68,8 @@ const MovieDetails = ({ movie }) => {
                     <h4>Vote Avg. {vote_average}</h4>
                     <h4>Vote Count {vote_count}</h4>
                 </div>
+                <button onClick={addMovie}>Add to List</button>
             </div>
-            <img
-                src={"https://image.tmdb.org/t/p/w342/" + poster}
-                alt={title}
-            />
-            <button onClick={addMovie}>Add to List</button>
         </div>
     );
 };
