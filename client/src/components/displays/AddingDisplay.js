@@ -6,6 +6,7 @@ import MoviesContainer from "../movie/MoviesContainer";
 import MovieDetails from "../movie/MovieDetails";
 import Search from "../search/Search";
 import Sidebar from "../sidebar/Sidebar";
+import Header from "../UIElements/Header";
 
 // Import Context
 import MovieContext from "../../context/movie/movieContext";
@@ -26,7 +27,10 @@ const AddingDisplay = () => {
 
     return (
         <div className="adding-display" onClick={clearDetails}>
-            <Search />
+            <div className="adding-header">
+                <Header />
+                <Search />
+            </div>
             <Sidebar />
             <MoviesContainer />
             {movieContext.state.single && (

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -7,13 +9,13 @@
 body {
     width: 100vw;
     height: 100vh;
+    background-color: #7b5589;
 }
 
 #root,
 .site-container {
     width: 100%;
     height: 100%;
-    background-color: #7b5589;
 }
 
 /* 
@@ -24,7 +26,7 @@ body {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 20% 45% 20% 5% 10%;
+    grid-template-rows: 25% 40% 20% 5% 10%;
 }
 
 .splash {
@@ -44,7 +46,10 @@ header {
 }
 
 header h1 {
-    font-size: 10vw;
+    font-size: 5rem;
+    text-align: center;
+    color: thistle;
+    font-family: "Pacifico";
 }
 
 footer {
@@ -71,10 +76,10 @@ footer .socials {
 .adding-display {
     position: relative;
     display: grid;
-    grid-template-rows: 25% 75%;
+    grid-template-rows: 15% 1fr;
     grid-template-columns: 85% 15%;
     width: 100%;
-    height: 100%;
+    background-color: #7b5589;
 }
 
 .adding {
@@ -83,10 +88,29 @@ footer .socials {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     flex-wrap: wrap;
-    justify-content: space-around;
+    height: 100%;
     padding: 0 50px;
 }
 
+.adding-header header h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.adding-header .search-form {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adding-header .search-bar {
+    width: 70%;
+    height: 50%;
+    padding: 10px;
+    font-size: 2rem;
+}
 /* 
     * COMPARISON DISPLAY
 */
@@ -132,9 +156,11 @@ footer .socials {
 
 .sidebar {
     background-color: #9565a7c6;
+    border-top: 3px solid black;
     border-left: 3px solid black;
     border-bottom: 3px solid black;
     border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
     padding: 15px;
     grid-row: 1 / 3;
     grid-column: 2 / 3;
@@ -148,8 +174,9 @@ footer .socials {
     list-style: none;
     position: relative;
     padding: 0;
-    margin: 0;
+    margin: 5px;
     display: flex;
+    max-width: 200px;
     border: 2px solid black;
 }
 
@@ -181,7 +208,7 @@ footer .socials {
 .title-blur {
     background: #9565a7c6;
     width: 100%;
-    height: 20%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,6 +221,7 @@ footer .socials {
     text-align: center;
     font-size: 1rem;
     font-weight: bold;
+    padding: 5px;
 }
 
 .movie-details {
