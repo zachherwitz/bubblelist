@@ -5,10 +5,8 @@
 -   [Overview](#overview)
 -   [Dependencies and Technology](#dependencies-and-technology)
 -   [File Architecture](#file-architecture)
-    -   [Server](#server)
-        -   [Models](#models)
-        -   [Routes](#routes)
-    -   [Client](#client)
+    -   [Endpoints](#endpoints)
+    -   [Models](#models)
 -   [Known Bugs](#known-bugs)
 -   [TODO](#todo)
 <hr>
