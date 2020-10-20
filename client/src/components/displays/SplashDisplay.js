@@ -31,7 +31,7 @@ const SplashDisplay = () => {
             <MoviesContainer />
             <Search />
             <div className="more-info">
-                <h2>click one a movie poster to begin a list</h2>
+                <h2>click on a movie poster to begin a list</h2>
                 <h3>or search for a specific film to get started!</h3>
             </div>
             <Footer />

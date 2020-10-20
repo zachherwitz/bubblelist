@@ -1,4 +1,6 @@
-# [Bubblelist](https://bubblelist.netlify.app/)
+![BubbleListLogo](readme-assets/logo.png)
+
+# <p style="text-align: center;">[Bubblelist](https://bubblelist.netlify.app/)</p>
 
 ## Table of Contents
 
@@ -16,6 +18,8 @@
 Bubblelist is a movie list generator in two stages. In the first stage, or the 'adding' stage, the user creates a list of movies either through direct title search, or by clicking 'add' on any displayed movie.
 
 During the second stage, the user is given a choice between two movies to remove from the list. Once the user makes their selection, two more random movies are chosen from the list until there is only one movie left.
+
+![BubbleListLogo](readme-assets/splash.png)
 
 <hr>
 
